@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  cobraapi:
+    image: cobraapi
+    build:
+      context: .
+      dockerfile: CobraApi/Dockerfile
