@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Amazon;
+using Amazon.DynamoDBv2;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CobraApi.Controllers
@@ -13,6 +12,14 @@ namespace CobraApi.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+            AmazonDynamoDBConfig clientConfig = new AmazonDynamoDBConfig
+            {
+                RegionEndpoint = RegionEndpoint.EUWest1,
+                ServiceURL = "http://localhost:8000"
+            };
+
+            var client = new AmazonDynamoDBClient(clientConfig);
+
             return new string[] { "value1", "value2" };
         }
 
