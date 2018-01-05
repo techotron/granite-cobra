@@ -1,5 +1,5 @@
 {
-    "CardId": "A GUID or whatever unique identifier works best for dynamoDb",
+    "CardId": "A GUID or whatever unique identifier works best for dynamoDb", \\ This will be the partition key (a simple primary key)
     "ImageURL: "S3 URL - cloudfront a possibility",
     "PackId": "base-core",
     "CardAttributes": {
