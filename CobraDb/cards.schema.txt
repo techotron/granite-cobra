@@ -1,0 +1,52 @@
+{
+    "CardId": "A GUID or whatever unique identifier works best for dynamoDb",
+    "ImageURL: "S3 URL - cloudfront a possibility",
+    "PackId": "base-core",
+    "CardAttributes": {
+        "Quote": "My hands are very large. Very large indeed.",
+        "Source": {
+            "Location": "Where quote was made",
+            "Date": "date when quote was made",
+            "Media": "format the quote was made on"
+        },
+        "Stats": {
+            "Racism": {
+                "Value": 0,
+                "PlayedCount": 0,
+                "WinningCount": 0,
+                "LosingCount": 0
+            },
+            "Sexism" {
+                "Value": 0,
+                "PlayedCount": 0,
+                "WinningCount": 0,
+                "LosingCount": 0
+            },
+            "Political Ineptitude": {
+                "Value": 0,
+                "PlayedCount": 0,
+                "WinningCount": 0,
+                "LosingCount": 0
+            },
+            "Bigotry": {
+                "Value": 0,
+                "PlayedCount": 0,
+                "WinningCount": 0,
+                "LosingCount": 0
+            },
+            "Confusion": {
+                "Value": 0,
+                "PlayedCount": 0,
+                "WinningCount": 0,
+                "LosingCount": 0
+            }
+        }
+    },
+    "Meta": {
+        "PlayedCount": {
+            "WinningCard": 0,
+            "LosingCard": 0,
+            "Played": 0
+           }
+    }
+}
