@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  stackName:
+    Description: Name for the stack
+    Type: String
+
+Resources:
+  cardsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        -
+          AttributeName: cardId
+          AttributeType: S
+        -
+          AttributeName: imageUrl
+          AttributeType: S
+        -
+          AttributeName: packId
+          AttributeType: S
+        -
+          AttributeName: cardAttributes
+          AttributeType: S
+        -
+          AttributeName: meta
+          AttributeType: S
+      KeySchema:
+        -
+          AttributeName: cardId
+          KeyType: HASH
+      TableName: cardsTable
+      GlobalSecondaryIndexes:
+        -
+          IndexName: globalSecondaryIndex
+          KeySchema:
+            -
+              AttributeName: packId
+              KeyType: HASH
+          Projection:
+            NonKeyAttributes:
+              - imageUrl
+              - packId
+              - cardAttributes
+              - meta
+            ProjectionType: INCLUDE
+          ProvisionedThroughput:
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      Tags:
+        - Key: project-stack
+          Value: !Join [ "-", [ !Ref stackName, "cardsTable" ]]
