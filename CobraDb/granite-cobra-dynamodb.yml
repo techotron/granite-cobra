@@ -11,12 +11,18 @@ Resources:
       TableName: cardsTable
       AttributeDefinitions:
         -
-          AttributeName: cardId
+          AttributeName: packId
           AttributeType: S
-      KeySchema:
         -
           AttributeName: cardId
+          AttributeType: N
+      KeySchema:
+        -
+          AttributeName: packId
           KeyType: HASH
+        -
+          AttributeName: cardId
+          KeyType: RANGE
       ProvisionedThroughput:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
