@@ -4,6 +4,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         Card cardReceived = getCard();
 
         receivedACard = true;
+
+        ((TextView)findViewById (R.id.quoteTextVew)).setText (cardReceived.Quote);
+        ((TextView)findViewById (R.id.ridiculousnessTextView)).setText (cardReceived.Ridiculousness);
 
         setCardVisible(true);
     }

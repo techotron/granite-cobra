@@ -67,7 +67,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/quoteTextVew"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="2"
@@ -75,7 +75,7 @@
                 android:text="Stuff goes here..." />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/ridiculousnessTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="2"
