@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  stackName:
+    Description: Name for the stack
+    Type: String
+
+Resources:
+  cardsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: cardsTable
+      AttributeDefinitions:
+        -
+          AttributeName: packId
+          AttributeType: S
+        -
+          AttributeName: cardId
+          AttributeType: N
+      KeySchema:
+        -
+          AttributeName: packId
+          KeyType: HASH
+        -
+          AttributeName: cardId
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      Tags:
+        - Key: project-stack
+          Value: !Join [ "-", [ !Ref stackName, "cardsTable" ]]
+
