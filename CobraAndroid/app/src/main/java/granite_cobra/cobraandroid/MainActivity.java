@@ -27,8 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         receivedACard = true;
 
-        ((TextView)findViewById (R.id.quoteTextVew)).setText (cardReceived.Quote);
-        ((TextView)findViewById (R.id.ridiculousnessTextView)).setText (cardReceived.Ridiculousness);
+        ((TextView)findViewById (R.id.quoteTextVew)).setText ('"' + cardReceived.Quote + '"');
+        ((TextView)findViewById (R.id.ridiculousnessTextView)).setText (Integer.toString(cardReceived.Ridiculousness));
+        ((TextView)findViewById (R.id.offensivenessTextView)).setText (Integer.toString(cardReceived.Offensiveness));
+        ((TextView)findViewById (R.id.grammarTextView)).setText (Integer.toString(cardReceived.GrammaticalIncorrectness));
+        ((TextView)findViewById (R.id.illegibilityTextView)).setText (Integer.toString(cardReceived.Illegibility));
 
         setCardVisible(true);
     }

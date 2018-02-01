@@ -13,57 +13,94 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/back"
         android:onClick="getACard"
         android:padding="5dp"
         android:text="Get a Card!"
         android:textColor="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cardContainer"
-        android:layout_width="304dp"
-        android:layout_height="384dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="497dp"
+        android:layout_height="109dp"
+        android:layout_marginBottom="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@color/colorPrimary"
         android:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <GridLayout
-            android:layout_width="288dp"
-            android:layout_height="368dp"
+            android:layout_width="480dp"
+            android:layout_height="94dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/colorPrimaryDark"
             android:padding="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.333">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/quoteLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quote:"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/illegibilityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:text="Illegibility"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/offensivenessLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:text="Offensiveness:"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/grammarLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:text="Grammatical Incorrectness"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ridiculousnessLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_row="1"
                 android:text="Ridiculousness:"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -72,7 +109,36 @@
                 android:layout_height="wrap_content"
                 android:layout_column="2"
                 android:layout_row="0"
-                android:text="Stuff goes here..." />
+                android:text="[score]"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/illegibilityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="4"
+                android:text="[score]"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/offensivenessTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="3"
+                android:text="[score]"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/grammarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="2"
+                android:text="[score]"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/ridiculousnessTextView"
@@ -80,7 +146,8 @@
                 android:layout_height="wrap_content"
                 android:layout_column="2"
                 android:layout_row="1"
-                android:text="Stuff goes here..." />
+                android:text="[score]"
+                android:textSize="12sp" />
 
         </GridLayout>
     </android.support.constraint.ConstraintLayout>
